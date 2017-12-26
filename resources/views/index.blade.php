@@ -17,7 +17,7 @@
 	<script type="text/javascript" src="{{ asset('js/onenav.js') }}"></script>   
     <script type="text/javascript" src="{{ asset('js/default.js') }}"></script>
     <!-- Document Title -->
-    <title>Young | The One-Page HTML5 Template</title>
+    <title>{{ config('app.name', 'Young | The One-Page HTML5 Template') }} </title>
 
 </head>
 
