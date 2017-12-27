@@ -42,7 +42,7 @@
                                     @lang('admin.navigation_users')
                                 </a>
 
-                            </li>
+                            </li> 
 
                         @endauth
                     </ul>
