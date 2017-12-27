@@ -43,6 +43,12 @@
                                 </a>
 
                             </li> 
+                            <li>
+                                <a href="{{ route('portfolio') }}">
+                                    @lang('admin.navigation_portfolio')
+                                </a>
+
+                            </li> 
 
                         @endauth
                     </ul>

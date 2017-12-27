@@ -13,12 +13,12 @@ class CreateTablePortfolio extends Migration
      */
     public function up()
     {
-        Schema::create('portfolio', function (Blueprint $table) {
+        Schema::create('portfolios', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name'); 
-            $table->integer('category_id')->unsigned()->index();
-            $table->softDeletes();
- 
+            $table->string('file'); 
+            $table->integer('category_id')->nullable()->unsigned();
+
             $table->foreign('category_id')->references('id')->on('portfolio_category');
         });
     }
@@ -30,6 +30,9 @@ class CreateTablePortfolio extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('portfolio');
+        Schema::dropIfExists('portfolios');
     }
+
+
+
 }

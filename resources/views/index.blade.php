@@ -345,22 +345,43 @@
 						<li><a href="#" data-filter=".term_id_3">Branding</a></li> 
 					</div>
 					<ul class="portfolio-rows">
-						<li class="portfolio-item term_id_2">
-							
-							<div class="overportfolio">
-								<img src="{{ asset('images/portfolio.jpg') }}" alt="Portfolio items"  /> 
-							 <i class="fa fa-plus"></i>
-							 <a href="#" class="portfolio-item-holder"><i class="fa fa-chevron-right"></i></a>
-									<h4 class="title-portfolio-item">
-										Canon
-									</h4>	
-								 
-									
-							</div>	 
-							
 						
-						</li>
-						
+						@foreach ($portfolios as $portfolio)
+
+							<li class="portfolio-item term_id_2">
+								
+								<div class="overportfolio">
+									<img src="{{ asset('storage/portfolio/$portfolio->file') }}" alt="{{ $portfolio->name }}"  /> 
+								 <i class="fa fa-plus"></i>
+								 <a href="#" class="portfolio-item-holder"><i class="fa fa-chevron-right"></i></a>
+										<h4 class="title-portfolio-item">
+											{{ $portfolio->name }}
+										</h4>	
+									 
+										
+								</div>	 
+								
+							
+							</li>
+
+						 @endforeach 
+
+						<!--
+							<li class="portfolio-item term_id_2">
+								
+								<div class="overportfolio">
+									<img src="{{ asset('images/portfolio.jpg') }}" alt="Portfolio items"  /> 
+								 <i class="fa fa-plus"></i>
+								 <a href="#" class="portfolio-item-holder"><i class="fa fa-chevron-right"></i></a>
+										<h4 class="title-portfolio-item">
+											Canon
+										</h4>	
+									 
+										
+								</div>	 
+								
+							
+							</li>
 						<li class="portfolio-item term_id_1"> 
 							<div class="overportfolio">
 								<img src="{{ asset('images/portfolio2.jpg') }}" alt="Portfolio items"  />
@@ -425,7 +446,7 @@
 							</div>	  
 						
 						</li>
-						
+						-->
 						
 					</ul> 
 					<div style="margin: 40px 0 90px 0; text-align: center; ">
